@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/vue','VueController@index');
+Route::get('/vue/get-json','VueController@getJson');
