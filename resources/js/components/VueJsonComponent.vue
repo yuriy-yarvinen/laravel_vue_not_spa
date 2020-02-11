@@ -11,6 +11,9 @@
 
 <script>
     export default {
+		props:[
+			'data-id'
+		],
 		data: function (){
 			return {
 				data: []
@@ -21,7 +24,7 @@
 		},
 		methods: {
 			update: function(){
-				axios.get('/vue/get-json').then((responce)=>{
+				axios.get('/vue/get-json/'+this.dataId).then((responce)=>{
 					this.data = responce.data
 				});
 			}

@@ -18,7 +18,7 @@
 				<div id="app">
 				<vue-component :data="{{json_encode($array)}}"></vue-component>
 					<br>
-				<vue-json-component></vue-json-component>
+				<vue-json-component data-id="2"></vue-json-component>
 				</div>
             </div>
         </div>

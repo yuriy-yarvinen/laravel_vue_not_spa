@@ -22,7 +22,7 @@ class VueController extends Controller
 		];
 		return view("vue", ["array" => $array]);
 	}
-    public function getJson()
+    public function getJson($id)
 	{
 		$array = [
 			[
@@ -38,6 +38,20 @@ class VueController extends Controller
 				'url' => 'youtube.com',
 			],
 		];
-		return $array;
+
+		$array2 = [
+			[
+				'title' => 'yandex',
+				'url' => 'yandex.ru',
+			],
+		];
+
+		if($id == 2){
+			return $array2;
+		}
+		else{
+			return $array;			
+		}
+
 	}
 }

@@ -1987,6 +1987,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['data-id'],
   data: function data() {
     return {
       data: []
@@ -1999,7 +2000,7 @@ __webpack_require__.r(__webpack_exports__);
     update: function update() {
       var _this = this;
 
-      axios.get('/vue/get-json').then(function (responce) {
+      axios.get('/vue/get-json/' + this.dataId).then(function (responce) {
         _this.data = responce.data;
       });
     }
